@@ -13,4 +13,16 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get helloWorld => 'سلام دنیا!';
+
+  @override
+  String get softwareEngineer => 'مهندس نرم‌افزار';
+
+  @override
+  String get browse => 'مرور';
+
+  @override
+  String get history => 'تاریخچه';
+
+  @override
+  String get theme => 'تم';
 }

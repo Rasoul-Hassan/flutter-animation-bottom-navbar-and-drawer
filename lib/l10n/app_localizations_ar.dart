@@ -13,4 +13,16 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get helloWorld => 'مرحبا بالعالم';
+
+  @override
+  String get softwareEngineer => 'مهندس برمجيات';
+
+  @override
+  String get browse => 'تصفح';
+
+  @override
+  String get history => 'السجل';
+
+  @override
+  String get theme => 'الوضع';
 }

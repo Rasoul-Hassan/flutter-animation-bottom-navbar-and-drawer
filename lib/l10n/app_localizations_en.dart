@@ -13,4 +13,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helloWorld => 'Hello World';
+
+  @override
+  String get softwareEngineer => 'Software Engineer';
+
+  @override
+  String get browse => 'Browse';
+
+  @override
+  String get history => 'History';
+
+  @override
+  String get theme => 'Theme';
 }

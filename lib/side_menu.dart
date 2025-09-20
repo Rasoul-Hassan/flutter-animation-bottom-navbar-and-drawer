@@ -6,6 +6,7 @@ import 'dart:math';
 import 'models/menu_item.dart';
 import 'theme.dart';
 import 'assets.dart' as app_assets;
+import 'l10n/app_localizations.dart';
 
 class SideMenu extends StatefulWidget {
   const SideMenu({super.key});
@@ -46,6 +47,8 @@ class _SideMenuState extends State<SideMenu> {
 
   @override
   Widget build(BuildContext context) {
+    final t = AppLocalizations.of(context)!; // localized strings
+
     return Container(
       width: 260,
       padding: EdgeInsets.only(
@@ -57,6 +60,7 @@ class _SideMenuState extends State<SideMenu> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // ----------- User Profile Header -----------
           Padding(
             padding: const EdgeInsets.all(16),
             child: Row(
@@ -81,7 +85,7 @@ class _SideMenuState extends State<SideMenu> {
                     ),
                     const SizedBox(height: 2),
                     Text(
-                      "Software Engineer",
+                      t.softwareEngineer, // localized job title
                       style: TextStyle(
                         color: Colors.white.withOpacity(0.7),
                         fontSize: 15,
@@ -93,18 +97,19 @@ class _SideMenuState extends State<SideMenu> {
               ],
             ),
           ),
+          // ----------- Menu Sections -----------
           Expanded(
             child: SingleChildScrollView(
               child: Column(
                 children: [
                   MenuButtonSection(
-                    title: "BROWSE",
+                    title: t.browse, // localized section title
                     selectedMenu: _selectedMenu,
                     menuIcons: _browseMenuIcons,
                     onMenuPress: onMenuPress,
                   ),
                   MenuButtonSection(
-                    title: "HISTORY",
+                    title: t.history, // localized section title
                     selectedMenu: _selectedMenu,
                     menuIcons: _historyMenuIcons,
                     onMenuPress: onMenuPress,
@@ -113,7 +118,7 @@ class _SideMenuState extends State<SideMenu> {
               ),
             ),
           ),
-          // const Spacer(),
+          // ----------- Theme Toggle -----------
           Padding(
             padding: const EdgeInsets.all(20),
             child: Row(
@@ -134,7 +139,7 @@ class _SideMenuState extends State<SideMenu> {
                 const SizedBox(width: 14),
                 Expanded(
                   child: Text(
-                    _themeMenuIcon[0].title,
+                    t.theme, // localized theme label
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 17,
@@ -153,6 +158,7 @@ class _SideMenuState extends State<SideMenu> {
   }
 }
 
+// ----------- Menu Section Widget -----------
 class MenuButtonSection extends StatelessWidget {
   const MenuButtonSection({
     super.key,
@@ -204,7 +210,7 @@ class MenuButtonSection extends StatelessWidget {
                 MenuRow(
                   menu: menu,
                   selectedMenu: selectedMenu,
-                  onMenuPress: () => onMenuPress!(menu),
+                  onMenuPress: () => onMenuPress?.call(menu),
                 ),
               ],
             ],

@@ -13,4 +13,16 @@ class AppLocalizationsKu extends AppLocalizations {
 
   @override
   String get helloWorld => 'سڵاو جیهان!';
+
+  @override
+  String get softwareEngineer => 'مهندس نرمافزار';
+
+  @override
+  String get browse => 'بەدواداچوون';
+
+  @override
+  String get history => 'مێژووی';
+
+  @override
+  String get theme => 'ڕووکاری';
 }

@@ -18,10 +18,17 @@ class _MyAppState extends State<MyApp> {
   bool _isDarkMode = false;
   Locale _locale = const Locale('en'); // Add this line
 
+  // helper to decide RTL languages (you wanted ku, ar, fa -> RTL)
+  bool _isRtl(Locale locale) {
+    final rtlCodes = ['ar', 'fa', 'ku'];
+    return rtlCodes.contains(locale.languageCode);
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      locale: _locale, // <-- important: set the current locale here
       localizationsDelegates: [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -34,7 +41,18 @@ class _MyAppState extends State<MyApp> {
         Locale('fa'), // Persian
         Locale('ku'), // Kurdish
         Locale('ar'), // Arabic
-      ], // Use state locale
+      ],
+      // Use state locale
+      // builder lets us wrap the whole app with a Directionality according to _locale
+      builder: (context, child) {
+        // child is the Navigator/Scaffold subtree
+        final isRtl = _isRtl(_locale);
+        return Directionality(
+          textDirection: isRtl ? TextDirection.rtl : TextDirection.ltr,
+          child: child ?? const SizedBox.shrink(),
+        );
+      },
+
       theme: ThemeData.light().copyWith(
         appBarTheme: const AppBarTheme(
           backgroundColor: Color(0xFF2fe49a),

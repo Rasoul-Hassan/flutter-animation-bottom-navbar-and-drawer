@@ -1,5 +1,9 @@
 {
   "@@locale": "fa",
   "appTitle": "برنامه من",
-  "helloWorld": "سلام دنیا!"
+  "helloWorld": "سلام دنیا!",
+  "softwareEngineer": "مهندس نرم‌افزار",
+  "browse": "مرور",
+  "history": "تاریخچه",
+  "theme": "تم"
 }

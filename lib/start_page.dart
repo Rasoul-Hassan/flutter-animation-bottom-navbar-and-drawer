@@ -141,12 +141,14 @@ class _StartPageState extends State<StartPage> {
       appBar: AppBar(
         title: const Text('Theming Example'),
         actions: [
+          // inside StartPage's AppBar actions (replace existing PopupMenuButton)
           PopupMenuButton<String>(
             icon: const Icon(Icons.language),
             onSelected: (lang) {
               setState(() => _selectedLanguage = lang);
               if (widget.onLocaleChanged != null) {
-                widget.onLocaleChanged!(_getLocaleFromLanguage(lang));
+                final locale = _getLocaleFromLanguage(lang);
+                widget.onLocaleChanged!(locale);
               }
             },
             itemBuilder: (_) => _languages

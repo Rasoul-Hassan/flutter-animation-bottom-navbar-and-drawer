@@ -1,5 +1,9 @@
 {
   "@@locale": "ar",
   "appTitle": "تطبيقي",
-  "helloWorld": "مرحبا بالعالم"
+  "helloWorld": "مرحبا بالعالم",
+  "softwareEngineer": "مهندس برمجيات",
+  "browse": "تصفح",
+  "history": "السجل",
+  "theme": "الوضع"
 }

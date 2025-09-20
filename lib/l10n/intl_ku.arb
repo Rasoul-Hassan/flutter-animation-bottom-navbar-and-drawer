@@ -1,5 +1,9 @@
 {
   "@@locale": "ku",
   "appTitle": "ئەپەکەم",
-  "helloWorld": "سڵاو جیهان!"
+  "helloWorld": "سڵاو جیهان!",
+  "softwareEngineer": "مهندس نرمافزار",
+  "browse": "بەدواداچوون",
+  "history": "مێژووی",
+  "theme": "ڕووکاری"
 }

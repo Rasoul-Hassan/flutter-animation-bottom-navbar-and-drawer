@@ -13,4 +13,16 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get helloWorld => '¡Hola Mundo!';
+
+  @override
+  String get softwareEngineer => 'Ingeniero de software';
+
+  @override
+  String get browse => 'Explorar';
+
+  @override
+  String get history => 'Historia';
+
+  @override
+  String get theme => 'Theme';
 }

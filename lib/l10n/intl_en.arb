@@ -1,5 +1,9 @@
 {
   "@@locale": "en",
   "appTitle": "My App",
-  "helloWorld": "Hello World"
+  "helloWorld": "Hello World",
+  "softwareEngineer": "Software Engineer",
+  "browse": "Browse",
+  "history": "History",
+  "theme": "Theme"
 }
