@@ -28,19 +28,28 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  curved_navigation_bar: ^1.0.6
   flutter:
     sdk: flutter
 
+
+# Localization packages
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+  rive: ^0.13.20
+#intl: ^0.20.2
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.8
-  curved_navigation_bar: ^1.0.6 #latest version
-  rive: ^0.13.20
-  font_awesome_flutter: ^10.10.0
-  
+cupertino_icons: ^1.0.8
+#curved_navigation_bar: ^1.0.6 #latest version
+#rive: ^0.13.20
+font_awesome_flutter: ^10.10.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -54,7 +63,7 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  generate: true # Enables automatic generation of localization files
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -63,7 +72,13 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+    - assets/flags/
     - assets/icons/icons.riv
+    - assets/icons/button.riv
+    - assets/icons/check.riv
+    - assets/icons/coyote.riv
+    - assets/icons/menu_button.riv
+    - assets/icons/shapes.riv
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 import 'models/menu_row.dart';
+import 'dart:math';
 import 'models/menu_item.dart';
 import 'theme.dart';
 import 'assets.dart' as app_assets;
@@ -46,9 +47,10 @@ class _SideMenuState extends State<SideMenu> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 260,
       padding: EdgeInsets.only(
         top: MediaQuery.of(context).padding.top,
-        bottom: MediaQuery.of(context).padding.bottom - 60,
+        bottom: max(0, MediaQuery.of(context).padding.bottom - 60),
       ),
       constraints: const BoxConstraints(maxWidth: 288),
       decoration: BoxDecoration(color: RiveAppTheme.background2),
