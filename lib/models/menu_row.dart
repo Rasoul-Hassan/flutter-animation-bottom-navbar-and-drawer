@@ -9,11 +9,13 @@ class MenuRow extends StatelessWidget {
   const MenuRow({
     super.key,
     required this.menu,
+    required this.title, // ✅ localized title comes from MenuButtonSection
     this.selectedMenu = "Home",
     this.onMenuPress,
   });
 
   final MenuItemModel menu;
+  final String title; // ✅ localized string
   final String selectedMenu;
   final Function? onMenuPress;
 
@@ -40,7 +42,7 @@ class MenuRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        // The menu button background that animates as we click on it
+        // The menu button background that animates when selected
         AnimatedContainer(
           duration: const Duration(milliseconds: 300),
           width: selectedMenu == menu.title ? 288 - 16 : 0,
@@ -73,7 +75,7 @@ class MenuRow extends StatelessWidget {
               ),
               const SizedBox(width: 14),
               Text(
-                menu.title,
+                title, // ✅ show localized title
                 style: const TextStyle(
                   color: Colors.white,
                   fontFamily: "Inter",

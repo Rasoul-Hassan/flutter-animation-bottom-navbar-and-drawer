@@ -5,5 +5,16 @@
   "softwareEngineer": "مهندس برمجيات",
   "browse": "تصفح",
   "history": "السجل",
-  "theme": "الوضع"
+  "theme": "الوضع",
+  "home": "الصفحة الرئيسية",
+  "search": "بحث",
+  "favorites": "المفضلة",
+  "help": "مساعدة",
+  "notifications": "الإشعارات",
+  "spanishLanguage": "الإسبانية",
+  "englishLanguage": "الإنجليزية",
+  "arabicLanguage": "العربية",
+  "kurdishLanguage": "الكردية",
+  "persianLanguage": "الفارسية"
+
 }

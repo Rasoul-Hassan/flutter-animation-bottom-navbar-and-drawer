@@ -25,4 +25,34 @@ class AppLocalizationsKu extends AppLocalizations {
 
   @override
   String get theme => 'ڕووکاری';
+
+  @override
+  String get home => 'ماڵەوە';
+
+  @override
+  String get search => 'گەڕان';
+
+  @override
+  String get favorites => 'هەڵبژاردەکان';
+
+  @override
+  String get help => 'یارمەتی';
+
+  @override
+  String get notifications => 'ئاگاداریەکان';
+
+  @override
+  String get spanishLanguage => 'ئیسپانی';
+
+  @override
+  String get englishLanguage => 'ئینگلیزی';
+
+  @override
+  String get arabicLanguage => 'عەرەبی';
+
+  @override
+  String get kurdishLanguage => 'کوردی';
+
+  @override
+  String get persianLanguage => 'فارسی';
 }

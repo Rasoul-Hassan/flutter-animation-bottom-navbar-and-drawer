@@ -16,43 +16,30 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   bool _isDarkMode = false;
-  Locale _locale = const Locale('en'); // Add this line
-
-  // helper to decide RTL languages (you wanted ku, ar, fa -> RTL)
-  bool _isRtl(Locale locale) {
-    final rtlCodes = ['ar', 'fa', 'ku'];
-    return rtlCodes.contains(locale.languageCode);
-  }
+  Locale _locale = const Locale('en'); // default locale
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      locale: _locale, // <-- important: set the current locale here
-      localizationsDelegates: [
+
+      // Localization
+      locale: _locale,
+      localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: [
+      supportedLocales: const [
         Locale('en'), // English
         Locale('es'), // Spanish
         Locale('fa'), // Persian
         Locale('ku'), // Kurdish
         Locale('ar'), // Arabic
       ],
-      // Use state locale
-      // builder lets us wrap the whole app with a Directionality according to _locale
-      builder: (context, child) {
-        // child is the Navigator/Scaffold subtree
-        final isRtl = _isRtl(_locale);
-        return Directionality(
-          textDirection: isRtl ? TextDirection.rtl : TextDirection.ltr,
-          child: child ?? const SizedBox.shrink(),
-        );
-      },
 
+      // Themes
       theme: ThemeData.light().copyWith(
         appBarTheme: const AppBarTheme(
           backgroundColor: Color(0xFF2fe49a),
@@ -61,7 +48,7 @@ class _MyAppState extends State<MyApp> {
         bottomNavigationBarTheme: const BottomNavigationBarThemeData(
           backgroundColor: Color(0xFF2fe49a),
           selectedItemColor: Color(0xFFf3e200),
-          unselectedItemColor: Colors.grey, //
+          unselectedItemColor: Colors.grey,
         ),
       ),
       darkTheme: ThemeData.dark().copyWith(
@@ -76,11 +63,12 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       themeMode: _isDarkMode ? ThemeMode.dark : ThemeMode.light,
+
+      // Pass callbacks to StartPage
       home: StartPage(
         isDarkMode: _isDarkMode,
         onThemeChanged: (val) => setState(() => _isDarkMode = val),
-        onLocaleChanged: (locale) =>
-            setState(() => _locale = locale), // Add this line
+        onLocaleChanged: (locale) => setState(() => _locale = locale),
       ),
     );
   }

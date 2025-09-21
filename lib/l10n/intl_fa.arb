@@ -5,5 +5,15 @@
   "softwareEngineer": "مهندس نرم‌افزار",
   "browse": "مرور",
   "history": "تاریخچه",
-  "theme": "تم"
+  "theme": "تم",
+  "home": " خانه",
+  "search": "جستجو",
+  "favorites": "مورد علاقه",
+  "help": "راهنما",
+  "notifications": "اعلان‌ها",
+  "spanishLanguage": "اسپانیایی",
+  "englishLanguage": "انگلیسی",
+  "arabicLanguage": "عربی",
+  "kurdishLanguage": "کردی",
+  "persianLanguage": "فارسی"
 }

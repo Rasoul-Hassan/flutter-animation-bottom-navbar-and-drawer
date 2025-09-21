@@ -24,5 +24,35 @@ class AppLocalizationsEs extends AppLocalizations {
   String get history => 'Historia';
 
   @override
-  String get theme => 'Theme';
+  String get theme => 'Tema';
+
+  @override
+  String get home => 'Inicio';
+
+  @override
+  String get search => 'Buscar';
+
+  @override
+  String get favorites => 'Favoritos';
+
+  @override
+  String get help => 'Ayuda';
+
+  @override
+  String get notifications => 'Notificaciones';
+
+  @override
+  String get spanishLanguage => 'Español';
+
+  @override
+  String get englishLanguage => 'Inglés';
+
+  @override
+  String get arabicLanguage => 'Árabe';
+
+  @override
+  String get kurdishLanguage => 'Kurdo';
+
+  @override
+  String get persianLanguage => 'Persa';
 }

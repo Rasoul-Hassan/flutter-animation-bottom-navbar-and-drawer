@@ -139,6 +139,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Theme'**
   String get theme;
+
+  /// No description provided for @home.
+  ///
+  /// In en, this message translates to:
+  /// **'Home '**
+  String get home;
+
+  /// No description provided for @search.
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get search;
+
+  /// No description provided for @favorites.
+  ///
+  /// In en, this message translates to:
+  /// **'Favorites'**
+  String get favorites;
+
+  /// No description provided for @help.
+  ///
+  /// In en, this message translates to:
+  /// **'Help'**
+  String get help;
+
+  /// No description provided for @notifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get notifications;
+
+  /// No description provided for @spanishLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Spanish'**
+  String get spanishLanguage;
+
+  /// No description provided for @englishLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get englishLanguage;
+
+  /// No description provided for @arabicLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Arabic'**
+  String get arabicLanguage;
+
+  /// No description provided for @kurdishLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Kurdish'**
+  String get kurdishLanguage;
+
+  /// No description provided for @persianLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Persian'**
+  String get persianLanguage;
 }
 
 class _AppLocalizationsDelegate

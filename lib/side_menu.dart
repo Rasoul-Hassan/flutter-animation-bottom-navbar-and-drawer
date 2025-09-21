@@ -175,6 +175,8 @@ class MenuButtonSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final t = AppLocalizations.of(context)!; // ✅ for translations
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -211,6 +213,26 @@ class MenuButtonSection extends StatelessWidget {
                   menu: menu,
                   selectedMenu: selectedMenu,
                   onMenuPress: () => onMenuPress?.call(menu),
+                  title: () {
+                    switch (menu.title.toLowerCase()) {
+                      case "home":
+                        return t.home;
+                      case "search":
+                        return t.search;
+                      case "favorites":
+                        return t.favorites;
+                      case "help":
+                        return t.help;
+                      case "history":
+                        return t.history;
+                      case "notification":
+                        return t.notifications;
+                      case "dark mode":
+                        return t.theme;
+                      default:
+                        return menu.title;
+                    }
+                  }(),
                 ),
               ],
             ],

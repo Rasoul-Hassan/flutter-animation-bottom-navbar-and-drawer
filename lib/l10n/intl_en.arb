@@ -5,5 +5,15 @@
   "softwareEngineer": "Software Engineer",
   "browse": "Browse",
   "history": "History",
-  "theme": "Theme"
+  "theme": "Theme",
+  "home": "Home ",
+  "search": "Search",
+  "favorites": "Favorites",
+  "help": "Help",
+  "notifications": "Notifications",
+  "spanishLanguage": "Spanish",
+  "englishLanguage": "English",
+  "arabicLanguage": "Arabic",
+  "kurdishLanguage": "Kurdish",
+  "persianLanguage": "Persian"
 }

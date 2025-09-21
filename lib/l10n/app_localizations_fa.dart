@@ -25,4 +25,34 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get theme => 'تم';
+
+  @override
+  String get home => ' خانه';
+
+  @override
+  String get search => 'جستجو';
+
+  @override
+  String get favorites => 'مورد علاقه';
+
+  @override
+  String get help => 'راهنما';
+
+  @override
+  String get notifications => 'اعلان‌ها';
+
+  @override
+  String get spanishLanguage => 'اسپانیایی';
+
+  @override
+  String get englishLanguage => 'انگلیسی';
+
+  @override
+  String get arabicLanguage => 'عربی';
+
+  @override
+  String get kurdishLanguage => 'کردی';
+
+  @override
+  String get persianLanguage => 'فارسی';
 }

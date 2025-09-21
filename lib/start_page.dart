@@ -8,6 +8,7 @@ import 'pages/search_page.dart';
 import 'pages/add_page.dart';
 import 'pages/profile_page.dart';
 import 'pages/settings_page.dart';
+import 'l10n/app_localizations.dart'; // ✅ import localization
 
 /// ------------------- RIVE ICON MODEL -------------------
 class TabItem {
@@ -100,17 +101,9 @@ class StartPage extends StatefulWidget {
 }
 
 class _StartPageState extends State<StartPage> {
-  //bool _isDarkMode = false;
-  final List<Map<String, String>> _languages = [
-    {'name': 'Spanish', 'flag': 'assets/flags/spain.png'},
-    {'name': 'Arabic', 'flag': 'assets/flags/egypt.png'},
-    {'name': 'English', 'flag': 'assets/flags/British.png'},
-    {'name': 'Kurdish', 'flag': 'assets/flags/Kurdistan.png'},
-    {'name': 'Persian', 'flag': 'assets/flags/iran.png'},
-  ];
-  String _selectedLanguage = 'English';
-
   int _currentIndex = 0;
+  String _selectedCode = 'en';
+
   final List<Widget> _pages = [
     const HomePage(),
     const SearchPage(),
@@ -119,15 +112,15 @@ class _StartPageState extends State<StartPage> {
     const SettingsPage(),
   ];
 
-  Locale _getLocaleFromLanguage(String lang) {
-    switch (lang) {
-      case 'Spanish':
+  Locale _getLocaleFromCode(String code) {
+    switch (code) {
+      case 'es':
         return const Locale('es');
-      case 'Arabic':
+      case 'ar':
         return const Locale('ar');
-      case 'Kurdish':
+      case 'ku':
         return const Locale('ku');
-      case 'Persian':
+      case 'fa':
         return const Locale('fa');
       default:
         return const Locale('en');
@@ -136,35 +129,76 @@ class _StartPageState extends State<StartPage> {
 
   @override
   Widget build(BuildContext context) {
+    final t = AppLocalizations.of(context)!;
+
+    // ✅ Localized language list
+    final languages = [
+      {
+        'code': 'es',
+        'name': t.spanishLanguage,
+        'flag': 'assets/flags/spain.png',
+      },
+      {
+        'code': 'ar',
+        'name': t.arabicLanguage,
+        'flag': 'assets/flags/egypt.png',
+      },
+      {
+        'code': 'en',
+        'name': t.englishLanguage,
+        'flag': 'assets/flags/British.png',
+      },
+      {
+        'code': 'ku',
+        'name': t.kurdishLanguage,
+        'flag': 'assets/flags/Kurdistan.png',
+      },
+      {
+        'code': 'fa',
+        'name': t.persianLanguage,
+        'flag': 'assets/flags/iran.png',
+      },
+    ];
+
+    // current language
+    final current = languages.firstWhere(
+      (lang) => lang['code'] == _selectedCode,
+      orElse: () => languages[2],
+    );
+
     return Scaffold(
       drawer: const Drawer(child: SideMenu()), // Side menu
       appBar: AppBar(
         title: const Text('Theming Example'),
         actions: [
-          // inside StartPage's AppBar actions (replace existing PopupMenuButton)
           PopupMenuButton<String>(
-            icon: const Icon(Icons.language),
-            onSelected: (lang) {
-              setState(() => _selectedLanguage = lang);
+            icon: Row(
+              children: [
+                Image.asset(current['flag']!, width: 24, height: 24),
+                const SizedBox(width: 6),
+                Text(current['name']!), // ✅ localized
+                const Icon(Icons.arrow_drop_down),
+              ],
+            ),
+            onSelected: (code) {
+              setState(() => _selectedCode = code);
               if (widget.onLocaleChanged != null) {
-                final locale = _getLocaleFromLanguage(lang);
+                final locale = _getLocaleFromCode(code);
                 widget.onLocaleChanged!(locale);
               }
             },
-            itemBuilder: (_) => _languages
-                .map(
-                  (lang) => PopupMenuItem<String>(
-                    value: lang['name']!,
-                    child: Row(
-                      children: [
-                        Image.asset(lang['flag']!, width: 24, height: 24),
-                        const SizedBox(width: 8),
-                        Text(lang['name']!),
-                      ],
-                    ),
-                  ),
-                )
-                .toList(),
+            itemBuilder: (_) => languages.map((lang) {
+              return PopupMenuItem<String>(
+                value: lang['code']!,
+                child: Row(
+                  children: [
+                    Image.asset(lang['flag']!, width: 24, height: 24),
+                    const SizedBox(width: 8),
+                    Text(lang['name']!), // ✅ localized
+                  ],
+                ),
+              );
+            }).toList(),
           ),
           ThemeSwitch(
             isDarkMode: widget.isDarkMode,

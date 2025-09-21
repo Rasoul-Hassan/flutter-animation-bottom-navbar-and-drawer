@@ -5,5 +5,15 @@
   "softwareEngineer": "Ingeniero de software",
   "browse": "Explorar",
   "history": "Historia",
-  "theme": "Theme"
+  "theme": "Tema",
+  "home": "Inicio",
+  "search": "Buscar",
+  "favorites": "Favoritos",
+  "help": "Ayuda",
+  "notifications": "Notificaciones",
+  "spanishLanguage": "Español",
+  "englishLanguage": "Inglés",
+  "arabicLanguage": "Árabe",
+  "kurdishLanguage": "Kurdo",
+  "persianLanguage": "Persa"
 }

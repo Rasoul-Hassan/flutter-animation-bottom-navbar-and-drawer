@@ -5,5 +5,15 @@
   "softwareEngineer": "مهندس نرمافزار",
   "browse": "بەدواداچوون",
   "history": "مێژووی",
-  "theme": "ڕووکاری"
+  "theme": "ڕووکاری",
+  "home": "ماڵەوە",
+  "search": "گەڕان",
+  "favorites": "هەڵبژاردەکان",
+  "help": "یارمەتی",
+  "notifications": "ئاگاداریەکان",
+  "spanishLanguage": "ئیسپانی",
+  "englishLanguage": "ئینگلیزی",
+  "arabicLanguage": "عەرەبی",
+  "kurdishLanguage": "کوردی",
+  "persianLanguage": "فارسی"
 }
