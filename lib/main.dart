@@ -15,8 +15,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  bool _isDarkMode = false;
-  Locale _locale = const Locale('en'); // default locale
+  bool _isDarkMode = true;
+  Locale _locale = const Locale('ar'); // default locale
 
   @override
   Widget build(BuildContext context) {

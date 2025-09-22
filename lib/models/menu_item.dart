@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'tab_item.dart';
-import 'package:flutter_animation_bottom_navbar_and_drawer/l10n/app_localizations.dart';
+//import 'package:flutter_animation_bottom_navbar_and_drawer/l10n/app_localizations.dart';
 
 class MenuItemModel {
   MenuItemModel({this.id, this.title = "", required this.riveIcon});

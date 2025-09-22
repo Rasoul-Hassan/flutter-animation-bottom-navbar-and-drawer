@@ -101,8 +101,8 @@ class StartPage extends StatefulWidget {
 }
 
 class _StartPageState extends State<StartPage> {
-  int _currentIndex = 0;
-  String _selectedCode = 'en';
+  int _currentIndex = 2;
+  String _selectedCode = 'ar';
 
   final List<Widget> _pages = [
     const HomePage(),
@@ -169,7 +169,7 @@ class _StartPageState extends State<StartPage> {
     return Scaffold(
       drawer: const Drawer(child: SideMenu()), // Side menu
       appBar: AppBar(
-        title: const Text('Theming Example'),
+        title: Text(t.appTitle),
         actions: [
           PopupMenuButton<String>(
             icon: Row(
