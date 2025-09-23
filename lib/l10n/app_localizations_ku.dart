@@ -55,4 +55,16 @@ class AppLocalizationsKu extends AppLocalizations {
 
   @override
   String get persianLanguage => 'فارسی';
+
+  @override
+  String get products => 'بەرهەمەکان';
+
+  @override
+  String get product => 'بەرهەم';
+
+  @override
+  String get price => 'بەرهەم';
+
+  @override
+  String get description => 'تێبینی';
 }

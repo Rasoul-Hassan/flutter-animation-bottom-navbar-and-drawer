@@ -15,5 +15,9 @@
   "englishLanguage": "انگلیسی",
   "arabicLanguage": "عربی",
   "kurdishLanguage": "کردی",
-  "persianLanguage": "فارسی"
+  "persianLanguage": "فارسی",
+  "products": "محصولات",
+  "product": "محصول",
+  "price": "قیمت",
+  "description": "توضیحات"
 }

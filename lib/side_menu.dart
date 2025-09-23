@@ -80,7 +80,7 @@ class _SideMenuState extends State<SideMenu> {
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 17,
-                        fontFamily: "Inter",
+                        // 👈 no hardcoded fontFamily, inherits from global
                       ),
                     ),
                     const SizedBox(height: 2),
@@ -89,7 +89,7 @@ class _SideMenuState extends State<SideMenu> {
                       style: TextStyle(
                         color: Colors.white.withOpacity(0.7),
                         fontSize: 15,
-                        fontFamily: "Inter",
+                        // 👈 no hardcoded fontFamily
                       ),
                     ),
                   ],
@@ -143,8 +143,8 @@ class _SideMenuState extends State<SideMenu> {
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 17,
-                      fontFamily: "Inter",
                       fontWeight: FontWeight.w600,
+                      // 👈 no hardcoded fontFamily
                     ),
                   ),
                 ),
@@ -192,8 +192,8 @@ class MenuButtonSection extends StatelessWidget {
             style: TextStyle(
               color: Colors.white.withOpacity(0.7),
               fontSize: 15,
-              fontFamily: "Inter",
               fontWeight: FontWeight.w600,
+              // 👈 no hardcoded fontFamily
             ),
           ),
         ),

@@ -127,9 +127,25 @@ class _StartPageState extends State<StartPage> {
     }
   }
 
+  /// ✅ Helper to get correct font family
+  String _getFontFamily(Locale locale) {
+    switch (locale.languageCode) {
+      case 'es':
+        return 'ShareTech';
+      case 'ar':
+      case 'fa':
+      case 'ku':
+        return 'NotoKufiArabic';
+      default:
+        return 'BebasNeue';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final t = AppLocalizations.of(context)!;
+    final locale = Localizations.localeOf(context); // ✅ current locale
+    final fontFamily = _getFontFamily(locale); // ✅ pick correct font
 
     // ✅ Localized language list
     final languages = [
@@ -169,14 +185,23 @@ class _StartPageState extends State<StartPage> {
     return Scaffold(
       drawer: const Drawer(child: SideMenu()), // Side menu
       appBar: AppBar(
-        title: Text(t.appTitle),
+        title: Text(
+          t.appTitle,
+          style: TextStyle(fontFamily: fontFamily), // ✅ dynamic font
+        ),
         actions: [
           PopupMenuButton<String>(
             icon: Row(
               children: [
                 Image.asset(current['flag']!, width: 24, height: 24),
                 const SizedBox(width: 6),
-                Text(current['name']!), // ✅ localized
+                Text(
+                  current['name']!,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontFamily: fontFamily, // ✅ dynamic font
+                  ),
+                ),
                 const Icon(Icons.arrow_drop_down),
               ],
             ),
@@ -194,7 +219,13 @@ class _StartPageState extends State<StartPage> {
                   children: [
                     Image.asset(lang['flag']!, width: 24, height: 24),
                     const SizedBox(width: 8),
-                    Text(lang['name']!), // ✅ localized
+                    Text(
+                      lang['name']!,
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontFamily: fontFamily, // ✅ dynamic font
+                      ),
+                    ),
                   ],
                 ),
               );

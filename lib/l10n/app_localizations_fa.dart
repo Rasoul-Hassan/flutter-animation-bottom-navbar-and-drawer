@@ -55,4 +55,16 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get persianLanguage => 'فارسی';
+
+  @override
+  String get products => 'محصولات';
+
+  @override
+  String get product => 'محصول';
+
+  @override
+  String get price => 'قیمت';
+
+  @override
+  String get description => 'توضیحات';
 }

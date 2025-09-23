@@ -15,6 +15,10 @@
   "englishLanguage": "الإنجليزية",
   "arabicLanguage": "العربية",
   "kurdishLanguage": "الكردية",
-  "persianLanguage": "الفارسية"
+  "persianLanguage": "الفارسية",
+  "products": "المنتجات",
+  "product": "المنتج",
+  "price": "السعر",
+  "description": "الوصف"
 
 }

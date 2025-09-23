@@ -78,7 +78,7 @@ class MenuRow extends StatelessWidget {
                 title, // ✅ show localized title
                 style: const TextStyle(
                   color: Colors.white,
-                  fontFamily: "Inter",
+                  fontFamily: "ShareTech",
                   fontWeight: FontWeight.w600,
                   fontSize: 17,
                 ),

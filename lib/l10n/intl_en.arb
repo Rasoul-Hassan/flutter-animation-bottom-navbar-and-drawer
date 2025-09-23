@@ -15,5 +15,9 @@
   "englishLanguage": "English",
   "arabicLanguage": "Arabic",
   "kurdishLanguage": "Kurdish",
-  "persianLanguage": "Persian"
+  "persianLanguage": "Persian",
+  "products": "Products",
+  "product": "Product",
+  "price": "Price",
+  "description": "Description"
 }

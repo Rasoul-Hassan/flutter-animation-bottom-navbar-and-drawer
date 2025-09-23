@@ -55,4 +55,16 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get persianLanguage => 'Persa';
+
+  @override
+  String get products => 'Productos';
+
+  @override
+  String get product => 'Producto';
+
+  @override
+  String get price => 'Precio';
+
+  @override
+  String get description => 'Descripción';
 }

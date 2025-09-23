@@ -15,5 +15,9 @@
   "englishLanguage": "ئینگلیزی",
   "arabicLanguage": "عەرەبی",
   "kurdishLanguage": "کوردی",
-  "persianLanguage": "فارسی"
+  "persianLanguage": "فارسی",
+  "products": "بەرهەمەکان",
+  "product": "بەرهەم",
+  "price": "بەرهەم",
+  "description": "تێبینی"
 }
